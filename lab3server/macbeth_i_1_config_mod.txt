@@ -1,0 +1,4 @@
+FIRST_WITCH FIRST_WITCH_macbeth_i_1_mod.txt
+SECOND_WITCH SECOND_WITCH_macbeth_i_1_mod.txt
+THIRD_WITCH THIRD_WITCH_macbeth_i_1_mod.txt
+ALL ALL_macbeth_i_1_mod.txt  THESE ARE EXTRA TOKENS
