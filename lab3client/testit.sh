@@ -18,9 +18,7 @@ TEST_CASE_DETAILS=(
     "Test case 4: Test 'partial_macbeth_act_i_script_mod.txt'. check against 'baseline_mac_mod.out'."
     "Test case 5: Test 'partial_macbeth_act_i_script_mod.txt'. with argument 'whinge'."
     "Test case 6: Test 'partial_mac_script_mod2.txt'."
-    "Test case 7: Test 'partial_mac_script_mod2.txt'. with argument 'whinge'."
-    "Test case 8: Test 'partial_mac_script_mod3.txt'."
-    "Test case 9: Test 'partial_mac_script_mod3.txt'. with argument 'whinge'."
+    "Test case 7: Test 'partial_mac_script_mod3.txt'."
 )
 
 # Function to display all test case details
@@ -165,30 +163,11 @@ run_test_case() {
         echo "Output are saved in '$OUTPUT_FILE'."
         ;;
     7)
-        INPUT_FILE="partial_mac_script_mod2.txt"
-        OUTPUT_FILE="test_mac_mod2_whinge.out"
-        echo "Command 1: Running test with argument 'whinge'."
-        echo "===============OUTPUT========================"
-        $EXECUTABLE "$INPUT_FILE" whinge 2>&1 | tee "$OUTPUT_FILE"
-        echo "===============END OF OUTPUT========================"
-        echo "Output are saved in '$OUTPUT_FILE'."
-        ;;
-
-    8)
         INPUT_FILE="partial_mac_script_mod3.txt"
         OUTPUT_FILE="test_mac_mod3.out"
         echo "Command 1: Running test."
         echo "===============OUTPUT========================"
         $EXECUTABLE "$INPUT_FILE" 2>&1 | tee "$OUTPUT_FILE"
-        echo "===============END OF OUTPUT========================"
-        echo "Output are saved in '$OUTPUT_FILE'."
-        ;;
-    9)
-        INPUT_FILE="partial_mac_script_mod3.txt"
-        OUTPUT_FILE="test_mac_mod3_whinge.out"
-        echo "Command 1: Running test with argument 'whinge'."
-        echo "===============OUTPUT========================"
-        $EXECUTABLE "$INPUT_FILE" whinge 2>&1 | tee "$OUTPUT_FILE"
         echo "===============END OF OUTPUT========================"
         echo "Output are saved in '$OUTPUT_FILE'."
         ;;
@@ -208,7 +187,7 @@ if [ "$#" -eq 0 ]; then
     echo "No test case specified."
     display_usage
 elif [ "$#" -eq 1 ]; then
-    if [[ "$1" =~ ^[0-9]$ ]]; then
+    if [[ "$1" =~ ^[0-7]$ ]]; then
         run_test_case "$1"
         echo "Completed test case $1."
     else

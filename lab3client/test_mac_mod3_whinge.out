@@ -1,5 +1,0 @@
-thread '<unnamed>' panicked at 'file THIRD_wddwdwdwdwdw.txt can not be opened!', src/lab2/player.rs:74:13
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-thread '<unnamed>' panicked at 'error in thread 2', src/lab2/scene_fragment.rs:186:21
-error in thread 0
-ERROR CODE: 2

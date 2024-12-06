@@ -36,7 +36,7 @@ We also add some testcase by ourselves.
 
 We write a script `testit.sh` in `lab3client` folder to test all the testcase easily by using simple command.
 
-The whole detail are showing below.
+A brief detail of the testcases in `testit.sh` are showing below.
 
 ```bash
 # Define test case details in a list
@@ -48,15 +48,30 @@ TEST_CASE_DETAILS=(
     "Test case 4: Test 'partial_macbeth_act_i_script_mod.txt'. check against 'baseline_mac_mod.out'."
     "Test case 5: Test 'partial_macbeth_act_i_script_mod.txt'. with argument 'whinge'."
     "Test case 6: Test 'partial_mac_script_mod2.txt'."
-    "Test case 7: Test 'partial_mac_script_mod2.txt'. with argument 'whinge'."
-    "Test case 8: Test 'partial_mac_script_mod3.txt'."
-    "Test case 9: Test 'partial_mac_script_mod3.txt'. with argument 'whinge'."
+    "Test case 7: Test 'partial_mac_script_mod3.txt'."
+)
+```
+
+You can run the test by using `./testit.sh [test_id 0~9]`.
+
+We also write a script `testit_server.sh` in `lab3client` folder to test all the testcase easily by using simple command.
+
+You can run the test by using `./testit_server.sh [test_id 0~2]` after running the server in `lab3server` folder by `cargo run 127.0.0.1:1024`.
+
+A brief detail of the testcases in `testit_server.sh` are showing below.
+
+```bash
+# Define test case details in a list
+TEST_CASE_DETAILS=(
+    "Test case 0: Test 'partial_hamlet_act_ii_script.txt' from server, check against 'baseline_ham.out'."
+    "Test case 1: Multiple clients connect to the server."
+    "Test case 2: Testing File doesn't exist on server."
 )
 ```
 
 Here is some of the bug we found using the testcase.
 
-#### test case 4
+#### Local test case 4
 
 ```bash
 ./testit.sh 4
@@ -103,4 +118,11 @@ That seems to speak things strange.                             That seems to sp
 ROSS.                                                           ROSS.
 God save the King!                                              God save the King!
 ...                                                             ...
+```
+
+#### Local test case 6 and 7
+
+```bash
+./testit.sh 6
+./testit.sh 7
 ```

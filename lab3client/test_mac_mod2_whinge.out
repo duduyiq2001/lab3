@@ -1,6 +1,0 @@
-failed to open file macbeth_i_2a_xaaxaxaxaconfig.txt
-ERROR: CAN NOT OPEN FILE macbeth_i_2a_xaaxaxaxaconfig.txt
-thread '<unnamed>' panicked at 'called `Result::unwrap()` on an `Err` value: 2', src/lab2/scene_fragment.rs:197:69
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-error in thread 1
-ERROR CODE: 2
