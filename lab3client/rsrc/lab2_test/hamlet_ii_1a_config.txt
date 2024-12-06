@@ -1,0 +1,2 @@
+Polonius rsrc/lab2_test/Polonius_hamlet_ii_1a.txt
+Reynaldo rsrc/lab2_test/Reynaldo_hamlet_ii_1a.txt

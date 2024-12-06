@@ -1,0 +1,2 @@
+[scene] scene 1
+rsrc/lab2_test_missing_duplicated_line_num/config.txt

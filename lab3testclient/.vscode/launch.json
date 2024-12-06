@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable",
+      "cargo": {
+        "args": ["build", "--bin=lab3testclient"],
+        "filter": {
+          "name": "lab3testclient",
+          "kind": "bin"
+        }
+      },
+      "args": ["127.0.0.1:1024", "Cargo.toml"],
+      "cwd": "${workspaceFolder}",
+      "sourceLanguages": ["rust"],
+      "env": {
+        "RUST_BACKTRACE": "1"
+      },
+      "terminal": "integrated"
+    }
+  ]
+}

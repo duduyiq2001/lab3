@@ -1,0 +1,5 @@
+MALCOLM MALCOLM_macbeth_i_2b_mod.txt
+
+    LENNOX     LENNOX_macbeth_i_2b_mod.txt
+ROSS ROSS_macbeth_i_2b_mod.txt  THESE ARE MORE EXTRA TOKENS
+DUNCAN DUNCAN_macbeth_i_2b_mod.txt

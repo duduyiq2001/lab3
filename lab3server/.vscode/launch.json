@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable",
+      "cargo": {
+        "args": ["build", "--bin=lab3server"],
+        "filter": {
+          "name": "lab3server",
+          "kind": "bin"
+        }
+      },
+      "args": ["127.0.0.1:1024"],
+      "cwd": "${workspaceFolder}",
+      "sourceLanguages": ["rust"],
+      "env": {
+        "RUST_BACKTRACE": "1"
+      },
+      "terminal": "integrated"
+    }
+  ]
+}

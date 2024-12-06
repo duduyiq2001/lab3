@@ -1,0 +1,2 @@
+A rsrc/lab2_test_script/A.txt
+B rsrc/lab2_test_script/B.txt

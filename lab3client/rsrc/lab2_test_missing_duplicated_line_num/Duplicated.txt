@@ -1,0 +1,5 @@
+6 line6_dup
+7 line7
+8 line8
+9 line9
+10 line10

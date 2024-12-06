@@ -1,0 +1,5 @@
+[scene] have scene name but no config file
+[scene] scene but have non-existent config file
+rsrc/lab2_test_script/config.txt
+non-existent file
+

@@ -1,0 +1,17 @@
+Guildenstern_hamlet_ii_2a.txt
+hamlet_act_ii_scene_1a.txt
+hamlet_act_ii_scene_1b.txt
+hamlet_act_ii_scene_1.txt
+hamlet_act_ii_scene_2a.txt
+hamlet_ii_1a_config.txt
+hamlet_ii_1b_config.txt
+hamlet_ii_2a_config.txt
+King_hamlet_ii_2a.txt
+Ophelia_hamlet_ii_1b.txt
+partial_hamlet_act_ii_scene_1_script.txt
+partial_hamlet_act_ii_script.txt
+Polonius_hamlet_ii_1a.txt
+Polonius_hamlet_ii_1b.txt
+Queen_hamlet_ii_2a.txt
+Reynaldo_hamlet_ii_1a.txt
+Rosencrantz_hamlet_ii_2a.txt

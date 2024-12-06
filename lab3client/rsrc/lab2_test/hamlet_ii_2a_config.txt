@@ -1,0 +1,4 @@
+Guildenstern rsrc/lab2_test/Guildenstern_hamlet_ii_2a.txt
+King rsrc/lab2_test/King_hamlet_ii_2a.txt
+Queen rsrc/lab2_test/Queen_hamlet_ii_2a.txt
+Rosencrantz rsrc/lab2_test/Rosencrantz_hamlet_ii_2a.txt

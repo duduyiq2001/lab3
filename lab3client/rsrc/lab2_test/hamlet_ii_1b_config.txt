@@ -1,0 +1,2 @@
+Polonius rsrc/lab2_test/Polonius_hamlet_ii_1b.txt
+Ophelia rsrc/lab2_test/Ophelia_hamlet_ii_1b.txt
