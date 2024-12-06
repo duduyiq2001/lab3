@@ -1,13 +1,15 @@
-use crate::lab2::declarations::*;
+// Implement the Play struct
+
+use super::scene_fragment::SceneFragment;
+use crate::lab3::declarations::*;
+use crate::lab3::script_gen::grab_trimmed_file_lines;
+use crate::mutex_lock_mut;
+use crate::mutex_lock_ref;
+use crate::stderr_writeln;
 use std::sync::atomic::Ordering;
+use std::sync::{Arc, Mutex};
 use std::thread;
 use std::thread::JoinHandle;
-use crate::lab2::script_gen::grab_trimmed_file_lines;
-use super::scene_fragment::SceneFragment;
-use crate::stderr_writeln;
-use crate::mutex_lock_ref;
-use crate::mutex_lock_mut;
-use std::sync::{ Arc, Mutex };
 
 /// whether the text field represents the title of a new scene (true) or the name of a configuration file (false)
 type ScriptConfig = Vec<(bool, String)>;
@@ -45,19 +47,17 @@ impl Play {
         }
 
         match tokens[FIRST_TOKEN_INDEX] {
-            "[scene]" => {
-                match tokens.len() {
-                    1 => {
-                        if SHOULD_COMPLAIN.load(Ordering::SeqCst) {
-                            stderr_writeln!("ERROR: MISSING TITLE");
-                        }
-                    }
-                    _ => {
-                        let title = tokens[1..].join(" ");
-                        script_config.push((true, title));
+            "[scene]" => match tokens.len() {
+                1 => {
+                    if SHOULD_COMPLAIN.load(Ordering::SeqCst) {
+                        stderr_writeln!("ERROR: MISSING TITLE");
                     }
                 }
-            }
+                _ => {
+                    let title = tokens[1..].join(" ");
+                    script_config.push((true, title));
+                }
+            },
             _ => {
                 script_config.push((false, tokens[FIRST_TOKEN_INDEX].to_string()));
                 if tokens.len() > 1 && SHOULD_COMPLAIN.load(Ordering::SeqCst) {
@@ -100,24 +100,21 @@ impl Play {
                             mutex_lock_ref!(self.frags[index]).exit_all();
                         }
                         _ => {
-                            mutex_lock_ref!(self.frags[index]).exit(
-                                mutex_lock_ref!(self.frags[index + 1])
-                            ); // passing the next frag into exit}
+                            mutex_lock_ref!(self.frags[index])
+                                .exit(mutex_lock_ref!(self.frags[index + 1])); // passing the next frag into exit}
                         }
                     }
                 }
                 _ => {
-                    mutex_lock_ref!(self.frags[index]).enter(
-                        mutex_lock_ref!(&self.frags[index - 1])
-                    );
+                    mutex_lock_ref!(self.frags[index])
+                        .enter(mutex_lock_ref!(&self.frags[index - 1]));
                     mutex_lock_mut!(self.frags[index]).recite();
                     // doing exit all for last one
                     if index == self.frags.len() - 1 {
                         mutex_lock_ref!(self.frags[index]).exit_all();
                     } else {
-                        mutex_lock_ref!(self.frags[index]).exit(
-                            mutex_lock_ref!(&self.frags[index + 1])
-                        );
+                        mutex_lock_ref!(self.frags[index])
+                            .exit(mutex_lock_ref!(&self.frags[index + 1]));
                     }
                 }
             }

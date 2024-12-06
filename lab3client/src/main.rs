@@ -1,13 +1,14 @@
-pub mod lab2;
+// main file of the lab3 client
+pub mod lab3;
 
 mod macros;
 use std::env;
 
-use lab2::declarations;
-use crate::lab2::play::Play;
+use crate::lab3::play::Play;
+use lab3::declarations;
 use std::sync::atomic::Ordering;
 
-use crate::lab2::return_wrapper::ReturnWrapper;
+use crate::lab3::return_wrapper::ReturnWrapper;
 
 // Constants
 
@@ -33,10 +34,9 @@ fn parse_args(config_file_name: &mut String) -> Result<(), u8> {
         args.push(arg);
     }
 
-    if
-        args.len() < MIN_ARGS ||
-        args.len() > MAX_ARGS ||
-        (args.len() == MAX_ARGS && args[OPTIONAL_ARG_INDEX] != "whinge")
+    if args.len() < MIN_ARGS
+        || args.len() > MAX_ARGS
+        || (args.len() == MAX_ARGS && args[OPTIONAL_ARG_INDEX] != "whinge")
     {
         usage(&args[PROGRAM_NAME_INDEX]);
         return Err(declarations::ERR_BAD_COMMAND);

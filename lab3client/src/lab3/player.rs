@@ -1,8 +1,10 @@
-use crate::lab2::declarations::SHOULD_COMPLAIN;
-use std::sync::atomic::Ordering as AtOrd;
+// Implement the Player struct
+
+use crate::lab3::declarations::Player;
+use crate::lab3::declarations::SHOULD_COMPLAIN;
+use crate::{stderr_writeln, stdout_writeln};
 use std::cmp::Ordering;
-use crate::lab2::declarations::Player;
-use crate::{ stderr_writeln, stdout_writeln };
+use std::sync::atomic::Ordering as AtOrd;
 
 const FIRST_LINE_INDEX: usize = 0;
 impl Player {
@@ -17,16 +19,15 @@ impl Player {
     /// ## Parse a single `unparsed_line` into a tuple with `character` and push them to `play`
     /// * unparsed_line: "<line_number> <line_text>"
     pub fn add_script_line(self: &mut Player, unparsed_line: &String) {
+
         if unparsed_line.len() > 0 {
             // Now, unparsed_line is not empty
 
             // Parse the line into a tuple (line_number, line_text)
             // etc.
             //      "32 Hello, World!"
-            if
-                let Some((line_number_str, line_text)) = unparsed_line.split_once(
-                    char::is_whitespace
-                )
+            if let Some((line_number_str, line_text)) =
+                unparsed_line.trim().split_once(char::is_whitespace)
             {
                 let line_number_str = line_number_str.trim();
                 let line_text = line_text.trim();
@@ -121,8 +122,9 @@ impl PartialEq for Player {
     fn eq(&self, other: &Self) -> bool {
         match (self.play_lines.first(), other.play_lines.first()) {
             (None, None) => true, // Both are silent characters
-            (Some((self_index_num, _)), Some((other_index_num, _))) =>
-                self_index_num == other_index_num,
+            (Some((self_index_num, _)), Some((other_index_num, _))) => {
+                self_index_num == other_index_num
+            }
             _ => false, // One has lines while the other does not
         }
     }
@@ -143,21 +145,15 @@ impl PartialOrd for Player {
 impl Ord for Player {
     fn cmp(&self, other: &Self) -> Ordering {
         match self.play_lines.len() {
-            0 => { self.play_lines.len().cmp(&other.play_lines.len()) }
-            _ => {
-                match other.play_lines.len() {
-                    0 => { Ordering::Greater }
-                    _ => {
-                        match &self.play_lines[FIRST_LINE_INDEX] {
-                            (index_num, _line) => {
-                                match &other.play_lines[FIRST_LINE_INDEX] {
-                                    (num, _line) => { index_num.cmp(num) }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            0 => self.play_lines.len().cmp(&other.play_lines.len()),
+            _ => match other.play_lines.len() {
+                0 => Ordering::Greater,
+                _ => match &self.play_lines[FIRST_LINE_INDEX] {
+                    (index_num, _line) => match &other.play_lines[FIRST_LINE_INDEX] {
+                        (num, _line) => index_num.cmp(num),
+                    },
+                },
+            },
         }
     }
 }

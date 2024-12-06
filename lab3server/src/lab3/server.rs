@@ -1,9 +1,10 @@
-use std::{ net::TcpListener, net::TcpStream, sync::atomic::AtomicBool };
-use std::io::{ BufReader, Read };
-use std::thread::JoinHandle;
+// Implement the server module
 use std::io::Write;
+use std::io::{BufReader, Read};
+use std::thread::JoinHandle;
+use std::{net::TcpListener, net::TcpStream, sync::atomic::AtomicBool};
 static CANCEL_FLAG: AtomicBool = AtomicBool::new(false);
-use crate::{ stderr_writeln, stdout_writeln };
+use crate::{stderr_writeln, stdout_writeln};
 use std::thread;
 
 use std::fs::File;
@@ -74,11 +75,9 @@ impl Server {
 /// making sure user can only access files at
 /// current directory
 fn is_safe_filename(filename: &str) -> bool {
-    !filename.contains(|c| {
-        match c {
-            '/' | '\\' | '$' => true,
-            _ => false,
-        }
+    !filename.contains(|c| match c {
+        '/' | '\\' | '$' => true,
+        _ => false,
     }) && !filename.contains("..")
 }
 
@@ -112,7 +111,9 @@ pub fn handle_client(mut stream: TcpStream) {
 
     let mut reader = BufReader::new(&stream);
     let mut line = String::new();
-    let _ = reader.read_line(&mut line).expect("failed to read from stream");
+    let _ = reader
+        .read_line(&mut line)
+        .expect("failed to read from stream");
     let tokens: Vec<&str> = line.split_whitespace().collect();
     if tokens.len() == 0 {
         // skip blank lines

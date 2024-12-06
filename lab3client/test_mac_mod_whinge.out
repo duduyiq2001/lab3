@@ -8,9 +8,6 @@ ROSS ROSS_macbeth_i_2b_mod.txt  THESE ARE MORE EXTRA TOKENS
 WHINGE: INVALID LINE NUMBER IN CHARACTERTHIRD_WITCH, LINE:
 NAN THIS SHOULD NOT BE TREATED AS A LINE OF TEXT SINCE ITS NUMBER IS BAD
 
-WHINGE: INVALID LINE NUMBER IN CHARACTERLENNOX, LINE:
-         2    What a haste looks through his eyes! So should he look 
-
 Macbeth ACT I SCENE I An open Place Thunder and Lightning by William Shakespeare
 [Enter FIRST_WITCH.]
 [Enter SECOND_WITCH.]
@@ -129,9 +126,9 @@ WHINGE: MISSING AT LINE NUMBER 0
 
 MALCOLM.
 The worthy Thane of Ross.
-WHINGE: MISSING AT LINE NUMBER 2
 
 LENNOX.
+What a haste looks through his eyes! So should he look
 That seems to speak things strange.
 
 ROSS.

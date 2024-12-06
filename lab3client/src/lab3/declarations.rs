@@ -1,3 +1,5 @@
+// Declare the public types and constants
+
 use std::sync::atomic::AtomicBool;
 
 // pub type Play = Vec<(usize, String, String)>;

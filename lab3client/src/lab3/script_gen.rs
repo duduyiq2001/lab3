@@ -1,9 +1,11 @@
-use std::fs::File;
-use std::io::{ BufRead, BufReader, Read };
-use std::net::TcpStream;
-use crate::lab2::declarations;
+// Implement the script_gen module
+
+use crate::lab3::declarations;
 use crate::stderr_writeln;
+use std::fs::File;
 use std::io::Write;
+use std::io::{BufRead, BufReader, Read};
+use std::net::TcpStream;
 
 use super::declarations::IO_ERROR;
 

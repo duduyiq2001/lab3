@@ -1,3 +1,5 @@
+// Declare the lab3 server
+
 pub mod lab3;
 mod macros;
 use lab3::return_wrapper::ReturnWrapper;

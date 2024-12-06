@@ -1,12 +1,13 @@
-use crate::lab2::declarations::*;
+// Implement the SceneFragment struct
+use crate::lab3::declarations::*;
+use crate::lab3::script_gen::grab_trimmed_file_lines;
+use crate::mutex_lock_mut;
+use crate::mutex_lock_ref;
+use crate::{stderr_writeln, stdout_writeln};
 use std::sync::atomic::Ordering;
+use std::sync::{Arc, Mutex, MutexGuard};
 use std::thread;
 use std::thread::JoinHandle;
-use crate::lab2::script_gen::grab_trimmed_file_lines;
-use crate::{ stderr_writeln, stdout_writeln };
-use crate::mutex_lock_ref;
-use crate::mutex_lock_mut;
-use std::sync::{ Arc, Mutex, MutexGuard };
 // PlayConfig: Vec[(name of character, file name), ...]
 type PlayConfig = Vec<(String, String)>;
 
@@ -73,7 +74,7 @@ impl SceneFragment {
     /// Read the `config_file_name` file and parse it to `title` and `SceneFragment_config`
     pub fn read_config(
         config_file_name: &String,
-        scene_frag_config: &mut PlayConfig
+        scene_frag_config: &mut PlayConfig,
     ) -> Result<(), u8> {
         let mut config_lines: Vec<String> = Vec::new();
 
@@ -136,9 +137,8 @@ impl SceneFragment {
                 }
                 continue;
             }
-            mutex_lock_mut!(self.players[player_to_speak_index.unwrap()]).speak(
-                &mut current_character
-            );
+            mutex_lock_mut!(self.players[player_to_speak_index.unwrap()])
+                .speak(&mut current_character);
             while let Some(player_index) = self.find_next_player(line_to_speak) {
                 if None == player_to_speak_index {
                     break;
@@ -150,9 +150,8 @@ impl SceneFragment {
                         player_index
                     );
                 }
-                mutex_lock_mut!(self.players[player_to_speak_index.unwrap()]).speak(
-                    &mut current_character
-                );
+                mutex_lock_mut!(self.players[player_to_speak_index.unwrap()])
+                    .speak(&mut current_character);
             }
         }
     }
@@ -197,7 +196,7 @@ impl SceneFragment {
         Self::read_config(config_file_name, &mut scene_frag_config).unwrap();
         Self::process_config(self, &scene_frag_config);
         // Sorting players based on first line num
-        self.players.sort_by(|x, y| { Self::compare_player(x, y) });
+        self.players.sort_by(|x, y| Self::compare_player(x, y));
     }
     /// test if the string is not blank
     pub fn non_blank(line: &String) -> bool {
@@ -257,7 +256,7 @@ impl SceneFragment {
 
     pub fn compare_player(
         player_a: &Arc<Mutex<Player>>,
-        player_b: &Arc<Mutex<Player>>
+        player_b: &Arc<Mutex<Player>>,
     ) -> std::cmp::Ordering {
         // getting atomic references
         let a_ref: &MutexGuard<'_, Player>;

@@ -1,13 +1,9 @@
 #!/bin/bash
 
+cargo build --release
+
 # Path to the executable
 EXECUTABLE="./target/release/lab_3"
-
-# Check if the executable exists; if not, build it
-if [ ! -f "$EXECUTABLE" ]; then
-    echo "Executable not found at $EXECUTABLE. Building the project..."
-    cargo build --release
-fi
 
 # Define test case details in a list
 TEST_CASE_DETAILS=(

@@ -120,9 +120,24 @@ God save the King!                                              God save the Kin
 ...                                                             ...
 ```
 
+This is because the script line in `LENNOX_macbeth_i_2b_mod.txt` contains illegal formatting.
+
+```plaintext
+         2    What a haste looks through his eyes! So should he look 
+3 That seems to speak things strange.
+```
+
+After adding an extra trim to `unparsed_line` in `add_script_line` function in `player.rs`, the output is the same as the baseline.
+
 #### Local test case 6 and 7
 
 ```bash
 ./testit.sh 6
 ./testit.sh 7
 ```
+
+test case 6 got a nonexist file in script `partial_mac_script_mod2.txt`.
+
+test case 7 got a nonexist file in config file `mac_i_1_hh.txt` from `partial_mac_script_mod3.txt`.
+
+these two test case show that the program can handle the error gracefully.

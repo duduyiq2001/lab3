@@ -1,8 +1,8 @@
 // Lab2 Step 9
 use crate::stderr_writeln;
-use std::process::{ ExitCode, Termination };
+use std::process::{ExitCode, Termination};
 
-use crate::lab2::declarations;
+use crate::lab3::declarations;
 
 pub struct ReturnWrapper {
     value: u8,

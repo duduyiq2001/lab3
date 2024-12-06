@@ -1,6 +1,6 @@
-// Lab2 Step 9
+// Implement the return wrapper
 
-use std::process::{ ExitCode, Termination };
+use std::process::{ExitCode, Termination};
 
 pub struct ReturnWrapper {
     value: u8,

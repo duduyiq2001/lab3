@@ -1,9 +1,10 @@
+// main file of the lab3 test client
 pub mod return_wrapper;
 use crate::return_wrapper::ReturnWrapper;
 use std::env;
+use std::io::BufRead;
 use std::io::BufReader;
 use std::io::Write;
-use std::io::BufRead;
 use std::net::TcpStream;
 pub const ARG_COUNT: usize = 3;
 pub const TOKEN_INDEX: usize = 2;
@@ -52,7 +53,9 @@ fn main() -> ReturnWrapper {
     // start client connection
 
     if let Ok(mut client_stream) = TcpStream::connect(&addr) {
-        client_stream.write_all(token.as_bytes()).expect("writing to server failed");
+        client_stream
+            .write_all(token.as_bytes())
+            .expect("writing to server failed");
         client_stream.flush().expect("flush failed");
         // waiting for response
         if token == "quit".to_string() {
