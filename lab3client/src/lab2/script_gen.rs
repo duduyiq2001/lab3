@@ -42,44 +42,6 @@ pub fn grab_trimmed_file_lines(file_name: &str, lines: &mut Vec<String>) -> Resu
         }
     }
     return Ok(());
-
-    // let file_result = File::open(file_name);
-    // match file_result {
-    //     Ok(file) => {
-    //         let mut reader = BufReader::new(file);
-    //         let mut line_content = String::new();
-
-    //         loop {
-    //             line_content.clear();
-
-    //             if let Err(_) = reader.read_line(&mut line_content) {
-    //                 // Read line failed
-    //                 stderr_writeln!("ERROR: CAN NOT READ LINE FROM FILE {}", file_name);
-    //                 return Err(declarations::ERR_SCRIPT_GENERATION_FAIL);
-    //             }
-
-    //             if line_content.is_empty() {
-    //                 // End of file
-    //                 break;
-    //             }
-
-    //             let trimmed_line = line_content.trim().to_string();
-
-    //             if !trimmed_line.is_empty() {
-    //                 // Deal with non-empty line only
-    //                 lines.push(trimmed_line);
-    //             } else {
-    //                 // Just skip
-    //             }
-    //         }
-    //         Ok(())
-    //     }
-    //     Err(_) => {
-    //         // Open file failed
-    //         stderr_writeln!("ERROR: CAN NOT OPEN FILE {}", file_name);
-    //         Err(declarations::ERR_SCRIPT_GENERATION_FAIL)
-    //     }
-    // }
 }
 
 pub fn is_valid_net_str(s: &str) -> bool {
@@ -125,7 +87,7 @@ pub fn is_valid_net_str(s: &str) -> bool {
 }
 
 pub fn get_buffered_reader(info: &String) -> Result<BufReader<Box<dyn Read>>, u8> {
-    if is_valid_net_str("net:") {
+    if is_valid_net_str(info) {
         let tokens: Vec<&str> = info.split(':').collect();
         if let [_, addr, port, f, ..] = tokens[..] {
             let mut file_name = f.to_string();
