@@ -37,6 +37,8 @@
    pub const IO_ERROR: u8 = 3;
    ```
    5. types of error for the server program
+
+
    ```pub const BINDING_ERROR: u8 = 1;
       pub const FILE_ERROR: u8 = 2; // not returned by main, only used internally
    
