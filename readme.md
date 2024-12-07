@@ -140,4 +140,8 @@ test case 6 got a nonexist file in script `partial_mac_script_mod2.txt`.
 
 test case 7 got a nonexist file in config file `mac_i_1_hh.txt` from `partial_mac_script_mod3.txt`.
 
+The assumption from the project description is that those non-existent config file would cause one of the threads to panic
+
+and then the panic will be captured by the main thread in the form of an error, which is exactly what happens in those two test cases.
+
 these two test case show that the program can handle the error gracefully.
