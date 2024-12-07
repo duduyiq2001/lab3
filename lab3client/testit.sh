@@ -63,9 +63,9 @@ run_test_case() {
         DIFF_EXIT_CODE=$? # get diff exit code
 
         if [ $DIFF_EXIT_CODE -eq 0 ]; then
-            echo -e "✅ No differences found between '$OUTPUT_FILE' and '$BASELINE_FILE'."
+            echo -e "❌ No differences found between '$OUTPUT_FILE' and '$BASELINE_FILE', which is not expected"
         else
-            echo -e "❌ Differences found:"
+            echo -e "Differences found, which is expected:"
             echo "$DIFF_OUTPUT"
         fi
         ;;
@@ -103,9 +103,9 @@ run_test_case() {
         DIFF_EXIT_CODE=$? # get diff exit code
 
         if [ $DIFF_EXIT_CODE -eq 0 ]; then
-            echo -e "✅ No differences found between '$OUTPUT_FILE' and '$BASELINE_FILE'."
+            echo -e "❌ No differences found between '$OUTPUT_FILE' and '$BASELINE_FILE', which is expected"
         else
-            echo -e "❌ Differences found:"
+            echo -e "Differences found, which is expected:"
             echo "$DIFF_OUTPUT"
         fi
         ;;
@@ -145,7 +145,7 @@ run_test_case() {
         if [ $DIFF_EXIT_CODE -eq 0 ]; then
             echo -e "✅ No differences found between '$OUTPUT_FILE' and '$BASELINE_FILE'."
         else
-            echo -e "❌ Differences found:"
+            echo -e " Differences found, which is expected:"
             echo "$DIFF_OUTPUT"
         fi
         ;;
