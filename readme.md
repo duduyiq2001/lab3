@@ -35,6 +35,7 @@
    /// indicating that the error that happens before any config scripts were obtained
    /// mostly IO/network/read/write error, we call it IO_ERROR
    pub const IO_ERROR: u8 = 3;
+   
    ```
    5. types of error for the server program
 
