@@ -53,10 +53,10 @@ run_test_case() {
     1)
         echo "Command 1: Multiple clients connect to the server."
 
-        $EXECUTABLE "net:$SERVER_ADDRESS:partial_hamlet_act_ii_script.txt" >/dev/null 2>&1 &
-        $EXECUTABLE "net:$SERVER_ADDRESS:partial_macbeth_act_i_script.txt" >/dev/null 2>&1 &
-        $EXECUTABLE "net:$SERVER_ADDRESS:partial_hamlet_act_ii_script.txt" >/dev/null 2>&1 &
-        $EXECUTABLE "net:$SERVER_ADDRESS:partial_macbeth_act_i_script.txt" >/dev/null 2>&1 &
+        $EXECUTABLE "net:$SERVER_ADDRESS:partial_hamlet_act_ii_script.txt" > multi1.txt 2>&1 &
+        $EXECUTABLE "net:$SERVER_ADDRESS:partial_macbeth_act_i_script.txt" > multi2.txt 2>&1 &
+        $EXECUTABLE "net:$SERVER_ADDRESS:partial_hamlet_act_ii_script.txt" > multi3.txt 2>&1 &
+        $EXECUTABLE "net:$SERVER_ADDRESS:partial_macbeth_act_i_script.txt" > multi4.txt 2>&1 &
         wait
         echo "All clients have connected to the server."
         ;;
