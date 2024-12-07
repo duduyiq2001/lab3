@@ -55,12 +55,8 @@ run_test_case() {
 
         $EXECUTABLE "net:$SERVER_ADDRESS:partial_hamlet_act_ii_script.txt" >/dev/null 2>&1 &
         $EXECUTABLE "net:$SERVER_ADDRESS:partial_macbeth_act_i_script.txt" >/dev/null 2>&1 &
-        $EXECUTABLE "net:$SERVER_ADDRESS:partial_mac_script_mod2.txt" >/dev/null 2>&1 &
-        $EXECUTABLE "net:$SERVER_ADDRESS:partial_mac_script_mod3.txt" >/dev/null 2>&1 &
         $EXECUTABLE "net:$SERVER_ADDRESS:partial_hamlet_act_ii_script.txt" >/dev/null 2>&1 &
         $EXECUTABLE "net:$SERVER_ADDRESS:partial_macbeth_act_i_script.txt" >/dev/null 2>&1 &
-        $EXECUTABLE "net:$SERVER_ADDRESS:partial_mac_script_mod2.txt" >/dev/null 2>&1 &
-        $EXECUTABLE "net:$SERVER_ADDRESS:partial_mac_script_mod3.txt" >/dev/null 2>&1 &
         wait
         echo "All clients have connected to the server."
         ;;

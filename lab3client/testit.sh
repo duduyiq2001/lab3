@@ -119,7 +119,7 @@ run_test_case() {
         echo "Output are saved in '$OUTPUT_FILE'."
 
         echo "Command 2: Diffing output with '$BASELINE_FILE'. (ignoring empty lines and spaces)."
-        DIFF_OUTPUT=$(diff -B -w -y "$OUTPUT_FILE" "$BASELINE_FILE")
+        DIFF_OUTPUT=$(diff -w -y "$OUTPUT_FILE" "$BASELINE_FILE")
         DIFF_EXIT_CODE=$? # get diff exit code
 
         if [ $DIFF_EXIT_CODE -eq 0 ]; then
@@ -143,7 +143,7 @@ run_test_case() {
         DIFF_EXIT_CODE=$? # get diff exit code
 
         if [ $DIFF_EXIT_CODE -eq 0 ]; then
-            echo -e "✅ No differences found between '$OUTPUT_FILE' and '$BASELINE_FILE'."
+            echo -e "❌  No differences found between '$OUTPUT_FILE' and '$BASELINE_FILE'."
         else
             echo -e " Differences found, which is expected:"
             echo "$DIFF_OUTPUT"

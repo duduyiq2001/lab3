@@ -1,185 +1,161 @@
-Test case 4: Test 'partial_macbeth_act_i_script_mod.txt'. check against 'baseline_mac_mod.out'.
-Command 1: Running test.
-Output are saved in 'test_mac_mod.out'.
-Command 2: Diffing output with 'baseline_mac_mod.out'. (ignoring empty lines and spaces).
-❌ Differences found:
-Macbeth ACT I SCENE I An open Place Thunder and Lightning by 	Macbeth ACT I SCENE I An open Place Thunder and Lightning by 
-[Enter FIRST_WITCH.]						[Enter FIRST_WITCH.]
-[Enter SECOND_WITCH.]						[Enter SECOND_WITCH.]
-[Enter THIRD_WITCH.]						[Enter THIRD_WITCH.]
-[Enter ALL.]							[Enter ALL.]
+Macbeth ACT I SCENE I An open Place Thunder and Lightning by William Shakespeare
+[Enter FIRST_WITCH.]
+[Enter SECOND_WITCH.]
+[Enter THIRD_WITCH.]
+[Enter ALL.]
 
 FIRST_WITCH.
 When shall we three meet again?
-In thunder, lightning, or in rain?				FIRST_WITCH.
-								When shall we three meet again?
-SECOND_WITCH.							In thunder, lightning, or in rain?
+In thunder, lightning, or in rain?
+
+SECOND_WITCH.
 When the hurlyburly's done,
-When the battle's lost and won.					SECOND_WITCH.
-								When the hurlyburly's done,
-THIRD_WITCH.							When the battle's lost and won.
+When the battle's lost and won.
+
+THIRD_WITCH.
 That will be ere the set of sun.
-								THIRD_WITCH.
-FIRST_WITCH.							That will be ere the set of sun.
+
+FIRST_WITCH.
 Where the place?
-								FIRST_WITCH.
-SECOND_WITCH.							Where the place?
+
+SECOND_WITCH.
 Upon the heath.
-								SECOND_WITCH.
-THIRD_WITCH.							Upon the heath.
+
+THIRD_WITCH.
 There to meet with Macbeth.
-								THIRD_WITCH.
-FIRST_WITCH.							There to meet with Macbeth.
+
+FIRST_WITCH.
 I come, Graymalkin!
-								FIRST_WITCH.
-ALL.								I come, Graymalkin!
+
+ALL.
 Paddock calls:--anon:--
-Fair is foul, and foul is fair:					ALL.
-Hover through the fog and filthy air.				Paddock calls:--anon:--
-[Exit ALL.]							Fair is foul, and foul is fair:
-[Exit THIRD_WITCH.]						Hover through the fog and filthy air.
+Fair is foul, and foul is fair:
+Hover through the fog and filthy air.
+[Exit ALL.]
+[Exit THIRD_WITCH.]
 [Exit SECOND_WITCH.]
-[Exit FIRST_WITCH.]						[Exit ALL.]
-Macbeth ACT I SCENE II A Camp near Forres by William Shakespe	[Exit THIRD_WITCH.]
-[Enter DUNCAN.]							[Exit SECOND_WITCH.]
-[Enter MALCOLM.]						[Exit FIRST_WITCH.]
+[Exit FIRST_WITCH.]
+Macbeth ACT I SCENE II A Camp near Forres by William Shakespeare
+[Enter DUNCAN.]
+[Enter MALCOLM.]
 [Enter SOLDIER.]
 
-DUNCAN.								Macbeth ACT I SCENE II A Camp near Forres by William Shakespe
-What bloody man is that? He can report,				[Enter DUNCAN.]
-As seemeth by his plight, of the revolt				[Enter MALCOLM.]
-The newest state.						[Enter SOLDIER.]
+DUNCAN.
+What bloody man is that? He can report,
+As seemeth by his plight, of the revolt
+The newest state.
 
 MALCOLM.
 This is the sergeant
-Who, like a good and hardy soldier, fought			DUNCAN.
-'Gainst my captivity.--Hail, brave friend!			What bloody man is that? He can report,
-Say to the king the knowledge of the broil			As seemeth by his plight, of the revolt
-As thou didst leave it.						The newest state.
+Who, like a good and hardy soldier, fought
+'Gainst my captivity.--Hail, brave friend!
+Say to the king the knowledge of the broil
+As thou didst leave it.
 
-SOLDIER.							MALCOLM.
-Doubtful it stood;						This is the sergeant
-As two spent swimmers that do cling together			Who, like a good and hardy soldier, fought
-And choke their art. The merciless Macdonwald,--		'Gainst my captivity.--Hail, brave friend!
-							      )	Say to the king the knowledge of the broil
-							      )	As thou didst leave it.
-							      )
-							      )	SOLDIER.
-							      )	Doubtful it stood;
-							      )	As two spent swimmers that do cling together
-							      )	And choke their art. The merciless Macdonwald,--
-Worthy to be a rebel,--for to that			      <
-The multiplying villainies of nature				The multiplying villainies of nature
-							      >	Worthy to be a rebel,--for to that
-Do swarm upon him,--from the Western isles			Do swarm upon him,--from the Western isles
-Of kerns and gallowglasses is supplied;				Of kerns and gallowglasses is supplied;
-And fortune, on his damned quarrel smiling,			And fortune, on his damned quarrel smiling,
-Show'd like a rebel's whore. But all's too weak;		Show'd like a rebel's whore. But all's too weak;
-For brave Macbeth,--well he deserves that name,--		For brave Macbeth,--well he deserves that name,--
-Disdaining fortune, with his brandish'd steel,			Disdaining fortune, with his brandish'd steel,
-Which smok'd with bloody execution,				Which smok'd with bloody execution,
-Like valor's minion,						Like valor's minion,
-Carv'd out his passag tTill he fac'd the slave;			Carv'd out his passag tTill he fac'd the slave;
-And ne'er shook hands, nor bade farewell to him,		And ne'er shook hands, nor bade farewell to him,
-Till he unseam'd him from the nave to the chaps,		Till he unseam'd him from the nave to the chaps,
-And fix'd his head upon our battlements.			And fix'd his head upon our battlements.
+SOLDIER.
+Doubtful it stood;
+As two spent swimmers that do cling together
+And choke their art. The merciless Macdonwald,--
+Worthy to be a rebel,--for to that
+The multiplying villainies of nature
+Do swarm upon him,--from the Western isles
+Of kerns and gallowglasses is supplied;
+And fortune, on his damned quarrel smiling,
+Show'd like a rebel's whore. But all's too weak;
+For brave Macbeth,--well he deserves that name,--
+Disdaining fortune, with his brandish'd steel,
+Which smok'd with bloody execution,
+Like valor's minion,
+Carv'd out his passag tTill he fac'd the slave;
+And ne'er shook hands, nor bade farewell to him,
+Till he unseam'd him from the nave to the chaps,
+And fix'd his head upon our battlements.
 
-DUNCAN.								DUNCAN.
-O valiant cousin! worthy gentleman!				O valiant cousin! worthy gentleman!
+DUNCAN.
+O valiant cousin! worthy gentleman!
 
-SOLDIER.							SOLDIER.
-As whence the sun 'gins his reflection				As whence the sun 'gins his reflection
-Shipwrecking storms and direful thunders break;			Shipwrecking storms and direful thunders break;
-So from that spring, whence comfort seem'd to come		So from that spring, whence comfort seem'd to come
-Discomfort swells. Mark, King of Scotland, mark:		Discomfort swells. Mark, King of Scotland, mark:
-No sooner justice had, with valor arm'd,			No sooner justice had, with valor arm'd,
-Compell'd these skipping kerns to trust their heels,		Compell'd these skipping kerns to trust their heels,
-But the Norweyan lord, surveying vantage,			But the Norweyan lord, surveying vantage,
-With furbish'd arms and new supplies of men,			With furbish'd arms and new supplies of men,
-Began a fresh assault.						Began a fresh assault.
+SOLDIER.
+As whence the sun 'gins his reflection
+Shipwrecking storms and direful thunders break;
+So from that spring, whence comfort seem'd to come
+Discomfort swells. Mark, King of Scotland, mark:
+No sooner justice had, with valor arm'd,
+Compell'd these skipping kerns to trust their heels,
+But the Norweyan lord, surveying vantage,
+With furbish'd arms and new supplies of men,
+Began a fresh assault.
 
-DUNCAN.								DUNCAN.
-Dismay'd not this						Dismay'd not this
-Our captains, Macbeth and Banquo?				Our captains, Macbeth and Banquo?
+DUNCAN.
+Dismay'd not this
+Our captains, Macbeth and Banquo?
 
-SOLDIER.							SOLDIER.
-Yes;								Yes;
-As sparrows eagles, or the hare the lion.			As sparrows eagles, or the hare the lion.
-If I say sooth, I must report they were				If I say sooth, I must report they were
-As cannons overcharg'd with double cracks;			As cannons overcharg'd with double cracks;
-So they								So they
-Doubly redoubled strokes upon the foe:				Doubly redoubled strokes upon the foe:
-Except they meant to bathe in reeking wounds,			Except they meant to bathe in reeking wounds,
-Or memorize another Golgotha,					Or memorize another Golgotha,
-I cannot tell:--						I cannot tell:--
-But I am faint; my gashes cry for help.				But I am faint; my gashes cry for help.
+SOLDIER.
+Yes;
+As sparrows eagles, or the hare the lion.
+If I say sooth, I must report they were
+As cannons overcharg'd with double cracks;
+So they
+Doubly redoubled strokes upon the foe:
+Except they meant to bathe in reeking wounds,
+Or memorize another Golgotha,
+I cannot tell:--
+But I am faint; my gashes cry for help.
 
-DUNCAN.								DUNCAN.
-So well thy words become thee as thy wounds;			So well thy words become thee as thy wounds;
-They smack of honor both.--Go, get him surgeons.		They smack of honor both.--Go, get him surgeons.
-Who comes here?							Who comes here?
+DUNCAN.
+So well thy words become thee as thy wounds;
+They smack of honor both.--Go, get him surgeons.
+Who comes here?
 [Exit SOLDIER.]
-[Enter LENNOX.]							[Exit SOLDIER.]
+[Enter LENNOX.]
 [Enter ROSS.]
 
-MALCOLM.							[Enter LENNOX.]
-The worthy Thane of Ross.					[Enter ROSS.]
+MALCOLM.
+The worthy Thane of Ross.
 
 LENNOX.
 What a haste looks through his eyes! So should he look
-That seems to speak things strange.				MALCOLM.
-								The worthy Thane of Ross.
+That seems to speak things strange.
+
 ROSS.
-God save the King!						LENNOX.
-								What a haste looks through his eyes! So should he look
-DUNCAN.								That seems to speak things strange.
+God save the King!
+
+DUNCAN.
 Whence cam'st thou, worthy thane?
-								ROSS.
-ROSS.								God save the King!
+
+ROSS.
 From Fife, great king;
-Where the Norweyan banners flout the sky			DUNCAN.
-And fan our people cold.					Whence cam'st thou, worthy thane?
+Where the Norweyan banners flout the sky
+And fan our people cold.
 Norway himself, with terrible numbers,
-Assisted by that most disloyal traitor				ROSS.
-The Thane of Cawdor, began a dismal conflict;			From Fife, great king;
-Till that Bellona's bridegroom, lapp'd in proof,		Where the Norweyan banners flout the sky
-Confronted him with self-comparisons,				And fan our people cold.
-Point against point rebellious, arm 'gainst arm,		Norway himself, with terrible numbers,
-Curbing his lavish spirit: and, to conclude,			Assisted by that most disloyal traitor
-The victory fell on us.						The Thane of Cawdor, began a dismal conflict;
-								Till that Bellona's bridegroom, lapp'd in proof,
-DUNCAN.								Confronted him with self-comparisons,
-Great happiness!						Point against point rebellious, arm 'gainst arm,
-								Curbing his lavish spirit: and, to conclude,
-ROSS.								The victory fell on us.
-							      )
-							      )	DUNCAN.
-							      )	Great happiness!
-							      )
-							      )	ROSS.
-That now						      <
-Sweno, the Norways' king, craves composition;			Sweno, the Norways' king, craves composition;
-							      >	That now
-Nor would we deign him burial of his men			Nor would we deign him burial of his men
-Till he disbursed, at Saint Colme's-inch,			Till he disbursed, at Saint Colme's-inch,
-Ten thousand dollars to our general use.			Ten thousand dollars to our general use.
+Assisted by that most disloyal traitor
+The Thane of Cawdor, began a dismal conflict;
+Till that Bellona's bridegroom, lapp'd in proof,
+Confronted him with self-comparisons,
+Point against point rebellious, arm 'gainst arm,
+Curbing his lavish spirit: and, to conclude,
+The victory fell on us.
 
-DUNCAN.								DUNCAN.
-No more that Thane of Cawdor shall deceive			No more that Thane of Cawdor shall deceive
-Our bosom interest:--go pronounce his present death,		Our bosom interest:--go pronounce his present death,
-And with his former title greet Macbeth.			And with his former title greet Macbeth.
+DUNCAN.
+Great happiness!
 
-ROSS.								ROSS.
-I'll see it done.						I'll see it done.
+ROSS.
+That now
+Sweno, the Norways' king, craves composition;
+Nor would we deign him burial of his men
+Till he disbursed, at Saint Colme's-inch,
+Ten thousand dollars to our general use.
 
-DUNCAN.								DUNCAN.
-What he hath lost, noble Macbeth hath won.			What he hath lost, noble Macbeth hath won.
+DUNCAN.
+No more that Thane of Cawdor shall deceive
+Our bosom interest:--go pronounce his present death,
+And with his former title greet Macbeth.
+
+ROSS.
+I'll see it done.
+
+DUNCAN.
+What he hath lost, noble Macbeth hath won.
 [Exit DUNCAN.]
 [Exit ROSS.]
-[Exit LENNOX.]							[Exit DUNCAN.]
-[Exit MALCOLM.]							[Exit ROSS.]
-							      )	[Exit LENNOX.]
-							      )	[Exit MALCOLM.]
-							      )
-							      )
-Completed test case 4.
+[Exit LENNOX.]
+[Exit MALCOLM.]
