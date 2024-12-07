@@ -16,7 +16,18 @@
 
 3. An overview of how your program was designed.
 
-    Step by step following the lab instruction.
+   1.Step by step following the lab instruction.
+
+   2.the process config of both play and scenefragments are parallelized using threads
+
+   3.the client process always append a "\n" after filename, the "\n" acts as a delimiter to inform the server that: I am done writing, please respond,
+
+   and the detection of which is done by the read_line function in the server side
+
+
+   
+
+   
 
 ## Section 2
 
