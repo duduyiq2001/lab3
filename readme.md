@@ -73,9 +73,13 @@ TEST_CASE_DETAILS=(
     "Test case 2: Test 'partial_macbeth_act_i_script.txt'. check against 'baseline_mac.out'."
     "Test case 3: Test 'partial_macbeth_act_i_script.txt'. with argument 'whinge'."
     "Test case 4: Test 'partial_macbeth_act_i_script_mod.txt'. check against 'baseline_mac_mod.out'."
+    #  This test case includes extra token and whitespace in script an config files, and missing, duplicate or unordered linenumber in players' script files.
     "Test case 5: Test 'partial_macbeth_act_i_script_mod.txt'. with argument 'whinge'."
+    
     "Test case 6: Test 'partial_mac_script_mod2.txt'."
+    # This test case includes non-exist filename in config files.
     "Test case 7: Test 'partial_mac_script_mod3.txt'."
+    # This test case includes non-exist filename in scipt file.
 )
 ```
 
@@ -163,9 +167,9 @@ After adding an extra trim to `unparsed_line` in `add_script_line` function in `
 ./testit.sh 7
 ```
 
-test case 6 got a nonexist file in script `partial_mac_script_mod2.txt`.
+test case 6 got a non-exist file in script `partial_mac_script_mod2.txt`.
 
-test case 7 got a nonexist file in config file `mac_i_1_hh.txt` from `partial_mac_script_mod3.txt`.
+test case 7 got a non-exist file in config file `mac_i_1_hh.txt` from `partial_mac_script_mod3.txt`.
 
 The assumption from the project description is that those non-existent config file would cause one of the threads to panic
 
