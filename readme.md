@@ -24,14 +24,11 @@
 
    and the detection of which is done by the read_line function in the server side
 
-   4 types of program error defined in client:
+   4. types of program error defined in client:
    
    ```// Return codes
    pub const SUCCESS: u8 = 0;
    pub const ERR_BAD_COMMAND: u8 = 1;
-   
-   // If the program should complain
-   pub static SHOULD_COMPLAIN: AtomicBool = AtomicBool::new(false);
    
    /// indicating the error stems from script generation, while the command format is correct
    pub const ERR_SCRIPT_GENERATION_FAIL: u8 = 2;
